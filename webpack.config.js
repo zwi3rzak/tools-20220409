@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const ESLintWebpackPlugin = require('eslint-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/main.js', './src/style.scss'],
+  entry: ['./src/main.ts', './src/style.scss'],
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
@@ -15,6 +15,10 @@ module.exports = {
         test: /.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
+      {
+        test: /.ts$/,
+        use: ['ts-loader'],
+      }
     ],
   },
   plugins: [
