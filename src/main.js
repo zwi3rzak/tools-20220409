@@ -3,7 +3,6 @@ const apiUrl = 'https://jsonplaceholder.typicode.com';
 const postsUrl = apiUrl + '/posts';
 const commentsUrl = `${apiUrl}/comments`;
 const usersUrl = `${apiUrl}/users`;
-let authorsUrl;
 
 async function getApiResponse(url) {
   const postsRequest = fetch(url);
